@@ -1,0 +1,53 @@
+/* Globals */
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Variables */
+:root {
+  --primary: #222222;
+  --secondary: #EBEBEA;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.container {
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  background-color: var(--secondary);
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.logo img {
+  transition: opacity .2s ease-in-out;
+}
+
+.logo:hover img {
+  opacity: .8;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
