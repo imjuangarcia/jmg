@@ -3,12 +3,37 @@
   font-family: 'Roboto Mono', monospace;
 }
 
+.animated {
+  transition: opacity .2s ease-in-out;
+}
+
+/* Reset */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
 /* Variables */
 :root {
   --primary: #222222;
   --secondary: #EBEBEA;
 }
 
+/* General styles */
 body {
   background-color: var(--primary);
 }
@@ -21,6 +46,7 @@ body {
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -31,11 +57,38 @@ header {
   height: 2rem;
 }
 
-.logo img {
-  transition: opacity .2s ease-in-out;
+.logo:hover img {
+  opacity: .8;
 }
 
-.logo:hover img {
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header nav button {
+  cursor: pointer;
+}
+
+.email {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-underline-offset: .25rem;
+  font-weight: 400;
+}
+
+.email:hover {
+  text-decoration: none;
+}
+
+.theme-switcher {
+  display: flex;
+  position: relative;
+  top: 1px;
+}
+
+.theme-switcher:hover img {
   opacity: .8;
 }
 
