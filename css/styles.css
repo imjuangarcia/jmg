@@ -4,7 +4,7 @@
 }
 
 .animated {
-  transition: opacity .2s ease-in-out;
+  transition: opacity .1s ease-in-out;
 }
 
 /* Reset */
@@ -25,6 +25,7 @@ button {
   margin: 0;
   border: none;
   box-shadow: none;
+  cursor: pointer;
 }
 
 /* Variables */
@@ -67,18 +68,17 @@ header nav ul {
   gap: 1.5rem;
 }
 
-header nav button {
-  cursor: pointer;
-}
-
 .email {
   color: var(--secondary);
-  text-decoration: underline;
-  text-underline-offset: .25rem;
   font-weight: 400;
 }
 
-.email:hover {
+.underline {
+  text-decoration: underline;
+  text-underline-offset: .25rem;
+}
+
+.underline:hover {
   text-decoration: none;
 }
 
@@ -92,15 +92,99 @@ header nav button {
   opacity: .8;
 }
 
+/* Grid */
+.content {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+/* ATF */
+.atf {
+  padding: 3rem 0;
+}
+
+.atf p {
+  color: var(--secondary);
+}
+
+.atf p a, .atf p button {
+  color: var(--secondary);
+  font-size: inherit;
+}
+
+.atf p a:hover, .atf p button:hover {
+  background: linear-gradient(to right,#12c2e9,#c471ed,#f64f59);
+  background-size: 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: gradient;
+}
+
 /* Media queries */
 @media screen and (min-width: 768px) {
   .container {
     padding: 5rem;
+  }
+  
+  .content {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .atf {
+    grid-column: 1/-1;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .atf p {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .atf {
+    grid-column: span 5;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
+  }
+
+  .content {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .atf {
+    grid-column: span 7;
+    padding-top: 16rem;
+    padding-bottom: 12rem;
+  }
+}
+
+/* Animations */
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 50% 0;
+  }
+  50% {
+    background-position: 90% 0;
+  }
+  60% {
+    background-position: 60%;
+  }
+  75% {
+    background-position: 40%;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
