@@ -1,7 +1,5 @@
 const toggle = document.querySelector(".theme-switcher");
 
-console.log(window.matchMedia("(prefers-color-scheme: dark)"))
-
 const storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 if (storedTheme) document.documentElement.setAttribute('data-theme', storedTheme);
 
