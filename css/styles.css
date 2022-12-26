@@ -140,9 +140,13 @@ header nav ul {
   padding-bottom: 1rem;
 }
 
-.columns li ol {
+.columns li ol:not(.social) {
   display: grid;
   grid-gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.columns li ol.social {
   padding-bottom: 1.5rem;
 }
 
