@@ -13,6 +13,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+  background-color: var(--primary);
+}
+
 ul, ol {
   list-style: none;
   padding: 0;
@@ -28,6 +33,10 @@ button {
   cursor: pointer;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 /* Variables */
 :root {
   --primary: #222222;
@@ -35,10 +44,6 @@ button {
 }
 
 /* General styles */
-body {
-  background-color: var(--primary);
-}
-
 .container {
   padding: 1rem;
 }
@@ -95,7 +100,6 @@ header nav ul {
 /* Grid */
 .content {
   display: grid;
-  grid-gap: 1rem;
 }
 
 /* ATF */
@@ -105,6 +109,7 @@ header nav ul {
 
 .atf p {
   color: var(--secondary);
+  padding: .75rem 0;
 }
 
 .atf p a, .atf p button {
@@ -122,6 +127,46 @@ header nav ul {
   animation-name: gradient;
 }
 
+/* Columns */
+.columns {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.columns li h3 {
+  color: var(--secondary);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.columns li ol {
+  display: grid;
+  grid-gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.columns li ol li h6, .columns li ol li a {
+  position: relative;
+  color: var(--secondary);
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.columns li ol li span {
+  font-size: .75rem;
+  color: var(--secondary);
+  font-weight: 400;
+  position: absolute;
+  padding-left: .25rem;
+  top: -.25rem;
+}
+
+.columns li ol li:hover span {
+  opacity: 1;
+}
+
 /* Media queries */
 @media screen and (min-width: 768px) {
   .container {
@@ -130,16 +175,29 @@ header nav ul {
   
   .content {
     grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
   }
 
   .atf {
     grid-column: 1/-1;
     padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
   }
 
   .atf p {
     font-size: 1.25rem;
+  }
+
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .columns li h3 {
+    padding-bottom: 3rem;
+  }
+
+  .columns li ol {
+    padding-bottom: 0;
   }
 }
 
@@ -147,7 +205,11 @@ header nav ul {
   .atf {
     grid-column: span 5;
     padding-top: 8rem;
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
+  }
+
+  .columns {
+    grid-column: 1/-1;
   }
 }
 
@@ -163,7 +225,15 @@ header nav ul {
   .atf {
     grid-column: span 7;
     padding-top: 16rem;
-    padding-bottom: 12rem;
+    padding-bottom: 11rem;
+  }
+
+  .columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .columns li ol li span {
+    opacity: 0;
   }
 }
 
