@@ -39,13 +39,24 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* Variables */
 :root {
+  --primary: #EBEBEA;
+  --secondary: #222222;
+}
+
+/* Theme variations */
+html[data-theme="dark"] {
   --primary: #222222;
   --secondary: #EBEBEA;
+}
+
+html[data-theme="dark"] .theme-switcher svg {
+  transform: rotate(180deg);
 }
 
 /* General styles */
 .container {
   padding: 1rem;
+  margin: auto;
 }
 
 /* Header */
@@ -93,7 +104,11 @@ header nav ul {
   top: 1px;
 }
 
-.theme-switcher:hover img {
+.theme-switcher svg g {
+  fill: var(--secondary);
+}
+
+.theme-switcher:hover svg {
   opacity: .8;
 }
 
@@ -194,10 +209,7 @@ header nav ul {
 
   .columns {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .columns li h3 {
-    padding-bottom: 3rem;
+    grid-column: 1/-1;
   }
 
   .columns li ol {
@@ -213,7 +225,11 @@ header nav ul {
   }
 
   .columns {
-    grid-column: 1/-1;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .columns li h3 {
+    padding-bottom: 3rem;
   }
 }
 
@@ -230,10 +246,6 @@ header nav ul {
     grid-column: span 7;
     padding-top: 16rem;
     padding-bottom: 11rem;
-  }
-
-  .columns {
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .columns li ol li span {
