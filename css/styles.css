@@ -144,6 +144,10 @@ header nav ul {
   animation-name: gradient;
 }
 
+.atf p span {
+  display: none;
+}
+
 /* Columns */
 .columns {
   display: grid;
@@ -245,6 +249,10 @@ header nav ul {
 
   .atf p {
     font-size: 1.25rem;
+  }
+
+  .atf p span {
+    display: initial;
   }
 
   .columns {
