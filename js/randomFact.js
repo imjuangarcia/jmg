@@ -1,8 +1,13 @@
 const facts = [
   "I play basketball although I'm not really tall (5'7\", or 170cm if you use a sane metric system).",
   "I have a cat named Milo 😻",
-  "When I shave my beard entirely, I look like a 15 year old teenager",
-  "Tangerines are the best fruits in the universe, period 🍊"
+  "When I shave my beard entirely, I look like a 15 year old teenager 👶🏻",
+  "Tangerines are the best fruits in the universe, period 🍊",
+  "I secretly dream about quitting programming and do pet sitting 🐶",
+  "I can\t live without three beverages: Whiskey 🥃, Mate 🧉 and Beer 🍻",
+  "I like to collect vinyl records 🎵",
+  "My entire life is organized in Notion 📔",
+  "I hate doing the dishes 🍽️"
 ]
 
 // Draggable post-it notes code adapted from https://codepen.io/pbmchc/pen/QvyEev
