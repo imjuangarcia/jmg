@@ -171,7 +171,7 @@ header nav ul {
   padding-bottom: 1.5rem;
 }
 
-.columns li ol li h6, .columns li ol li a {
+.columns li ol li p, .columns li ol li a {
   position: relative;
   color: var(--secondary);
   font-size: .9rem;
