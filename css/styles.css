@@ -171,6 +171,10 @@ header nav ul {
   padding-bottom: 1.5rem;
 }
 
+.columns li ol.social a {
+  padding: 1rem 0;
+}
+
 .columns li ol li p, .columns li ol li a {
   position: relative;
   color: var(--secondary);
