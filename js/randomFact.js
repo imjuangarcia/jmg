@@ -4,7 +4,7 @@ const facts = [
   "When I shave my beard entirely, I look like a 15 year old teenager 👶🏻",
   "Tangerines are the best fruits in the universe, period 🍊",
   "I secretly dream about quitting programming and do pet sitting 🐶",
-  "I can\t live without three beverages: Whiskey 🥃, Mate 🧉 and Beer 🍻",
+  "I can\'t live without three beverages: Whiskey 🥃, Mate 🧉 and Beer 🍻",
   "I like to collect vinyl records 🎵",
   "My entire life is organized in Notion 📔",
   "I hate doing the dishes 🍽️"
